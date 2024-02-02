@@ -35,7 +35,7 @@ body {
 .logo {
     font-size: 40px;
     font-weight: 600;
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     margin-left: 0.4em;
     /* left:12.6em; */
 }
@@ -206,7 +206,7 @@ option {
     width: 20.5em;
     height: 22.6em;
     color: #ffffff;
-    font-family: Roboto;
+    font-family: Roboto,sans-serif;
     font-weight: 400;
     border-radius: 8px;
 }
