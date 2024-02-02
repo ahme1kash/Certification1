@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Roboto:wght@600&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="score_con">
+        <div class="logo">
+            <p>Rock</p>
+            <p>Paper</p>
+            <p>Scissors</p>
+        </div>
+        <span class="scoreboard">
+
+
+            <div class="userscore">
+
+                <pre>
+YOUR
+ SCORE 
+            </pre>
+
+
+
+                <div class="user_counter"> </div>
+            </div>
+
+            <div class="computerscore">
+
+                <pre>
+COMPUTER
+SCORE
+                </pre>
+
+
+
+                <div class="comp_counter"> </div>
+            </div>
+        </span>
+
+
+    </div>
+    <div class="game_con">
+        <div class="info">
+           
+            <pre class="user">
+                <!-- You Picked -->
+            </pre>
+            <pre class="computer">
+                <!-- Computer Picked -->
+            </pre>
+        </div>
+        <div class="choices">
+            <img class="user_choice">
+            <div class="result" id="result"> </div>
+            <img class="comp_choice">
+        </div>
+        <div class="option">
+            <div class="triangle">
+                <img class="line1" src="./images/Line 1.png" alt="Line1">
+                <br>
+                <img class="line3" src="./images/Line 3.png" alt="Line3">
+                <img class="line2" src="./images/Line 2.png" alt="Line2">
+            </div>
+            <span class="keys">
+                
+                <div class="rock_pic con">
+                    <div class="item">
+                        <button class="play3" onclick="play('rock')">
+                            <img src="./images/Rock.png" alt="Rock">
+                        </button>
+                    </div>
+                </div>
+                <div class="scissors_pic con">
+                    <div class="item">
+                        <button class="play2" onclick="play('scissors')">
+                            <img src="./images/Scissors.png" alt="Scissors">
+                        </button>
+                    </div>
+                </div>
+                <div class="paper_pic con">
+                <div class="item">
+                    <button class="play1" onclick="play('paper')">
+                        <img src="./images/Paper.png" alt="Paper">
+                    </button>
+                </div>
+            </div>
+                
+
+            </span>
+        </div>
+
+        <button class="reset"> </button>
+        <br />
+        <button class="next"> </button>
+        <div class="button_div">
+            <button class="btn_Rule">RULES</button>
+        </div>
+        <div class="content-box" id="contentBox">
+
+
+            <pre>
+                      <span style="font-size:2em;">Game Rules</span> 
+
+         Rock beats scissors, scissors beat 
+         paper, and paper beats rock.
+            
+         Agree ahead of time whether you’ll
+         count off “rock, paper, scissors,
+         shoot” or just “rock, paper, scissors.”
+
+            
+         Use rock, paper, scissors to settle
+         minor decisions or simply play to
+         pass the time 
+                
+            
+         If both players lay down the same
+         hand, each player lays down
+         another hand
+
+</pre>
+            <div class="cancel">
+                    <buttton class="close">X</button>
+                    
+            </div>
+        </div>
+
+    </div>
+    <script defer src="./script.js"> </script>
+</body>
+
+</html>
