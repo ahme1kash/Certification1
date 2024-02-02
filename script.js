@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".next").style.visibility = "hidden";
   document.querySelector(".reset").style.visibility = "hidden";
-  const rule = document.querySelector(".button_div")
-  rule.style.right="2em"
+  const rule = document.querySelector(".button_div");
+  rule.style.right = "2em";
   getFromLocal();
 });
 const contentBox = document.querySelector("#contentBox");
@@ -36,10 +36,10 @@ const img_paths = {
   scissors: path_scissors,
 };
 const img_alt = {
-    rock: "rock image",
-    paper:"paper image",
-    scissors: "scissors image"
-}
+  rock: "rock image",
+  paper: "paper image",
+  scissors: "scissors image",
+};
 function play(userChoice) {
   const choices = ["rock", "paper", "scissors"];
   const computerChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -57,7 +57,6 @@ function play(userChoice) {
     count2.innerText = parseInt(score2);
     localStorage.setItem("User", JSON.stringify(score2));
   }
-
 }
 function declareWinner(userChoice, computerChoice) {
   let winner = "";
@@ -66,35 +65,34 @@ function declareWinner(userChoice, computerChoice) {
   const user_choice = document.querySelector(".user_choice");
   const user = document.querySelector(".user");
   const computer = document.querySelector(".computer");
-  user.innerHTML="YOU PICKED"
-  computer.innerHTML="PC PICKED"
+  user.innerHTML = "YOU PICKED";
+  computer.innerHTML = "PC PICKED";
 
-  user.style.color = "#ffffff"
-  user.style.fontWeight = "800"
-  user.style.marginTop = "4em"
-  computer.style.marginTop = "2.5em"
-  computer.style.fontWeight = "800"
-  computer.style.color = "#ffffff"
+  user.style.color = "#ffffff";
+  user.style.marginRight = "2em";
+  user.style.fontWeight = "800";
+  user.style.fontSize = "1.5em";
+  user.style.marginTop = "4em";
+  computer.style.marginTop = "2.5em";
+  computer.style.fontSize = "1.5em";
+  computer.style.fontWeight = "800";
+  computer.style.color = "#ffffff";
   user_choice.src = img_paths[userChoice];
   comp_choice.src = img_paths[computerChoice];
   user_choice.alt = img_alt[userChoice];
   comp_choice.alt = img_alt[computerChoice];
-  res.style.color = '#ffffff'
-  res.style.fontWeight = '1000'
-  res.style.letterSpacing = '3px'
-  res.style.fontSize="2em"
-  res.style.marginTop="-1em"
+
   if (userChoice === computerChoice) {
-    res.innerHTML = "TIE UP <pre>\nAGAINST PC"
+    res.innerHTML = "TIE UP <pre>\nAGAINST PC";
   } else if (
     (userChoice === "rock" && computerChoice === "scissors") ||
     (userChoice === "paper" && computerChoice === "rock") ||
     (userChoice === "scissors" && computerChoice === "paper")
   ) {
-    res.innerHTML = "YOU <pre> WIN \nAGAINST PC"
-    document.querySelector(".button_div").style.marginRight="6em"
+    res.innerHTML = "YOU WIN <pre> \nAGAINST PC";
+    document.querySelector(".button_div").style.marginRight = "6em";
     // document.querySelector(".button_div").style.marginTop="9em"
-    document.querySelector(".button_div").style.position="absolute"
+    document.querySelector(".button_div").style.position = "absolute";
     winner = "user";
 
     if (winner == "user") {
@@ -104,6 +102,11 @@ function declareWinner(userChoice, computerChoice) {
     res.innerHTML = "YOU <pre> LOST \nAGAINST PC";
     winner = "computer";
   }
+  res.style.color = "#ffffff";
+  res.style.fontWeight = "1000";
+  res.style.letterSpacing = "3px";
+  res.style.fontSize = "2em";
+  res.style.marginTop = "-1em";
   removeGameContainer(winner);
   return winner == "user" ? true : winner == "computer" ? false : null;
 }
@@ -126,12 +129,12 @@ function removeGameContainer(winner) {
   }
   reset.style.color = "Grey";
   reset.style.backgroundColor = "White";
-  reset.style.marginTop = "-5em";
-//   reset.style.Bottom = "-1em";
+  reset.style.marginTop = "-2.3em";
+  //   reset.style.Bottom = "-1em";
   reset.style.fontSize = "1.2em";
   reset.style.fontWeight = "900";
 
-//   reset.style.backgroundColor = "#20112e";
+  //   reset.style.backgroundColor = "#20112e";
   reset.onclick = function () {
     location.reload(true);
   };
@@ -157,7 +160,7 @@ function addNextButton() {
   next.style.cursor = "pointer";
   next.style.boxSizing = "border-box";
   next.style.padding = "5px";
-  next.style.fontWeight= "800";
+  next.style.fontWeight = "800";
   next.onclick = function () {
     // Reload the current page
     location.href = "./victory.html";
